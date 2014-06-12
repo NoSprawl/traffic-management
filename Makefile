@@ -4,9 +4,9 @@ INCLUDE := -isystem /lib/modules/`uname -r`/build/include
 CFLAGS  := -O2 -DMODULE -D__KERNEL__ ${WARN} ${INCLUDE}
 CC      := gcc-3.0
 	
-${TARGET}.o: ${TARGET}.c
+${TARGET}.o: src/${TARGET}.c
 
 .PHONY: clean
 
 clean:
-    rm -rf ${TARGET}.o
+    rm -rf bin/${TARGET}.o
